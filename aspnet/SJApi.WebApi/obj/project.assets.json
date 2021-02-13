@@ -203,6 +203,16 @@
             "rid": "win"
           }
         }
+      },
+      "SJApi.ObjectModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/SJApi.ObjectModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SJApi.ObjectModel.dll": {}
+        }
       }
     }
   },
@@ -576,12 +586,18 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "SJApi.ObjectModel/1.0.0": {
+      "type": "project",
+      "path": "../SJApi.ObjectModel/SJApi.ObjectModel.csproj",
+      "msbuildProject": "../SJApi.ObjectModel/SJApi.ObjectModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.0",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 5.0.0",
+      "SJApi.ObjectModel >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -609,7 +625,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Admin\\Workspace\\StockJock\\dotnet-api\\aspnet\\SJApi.ObjectModel\\SJApi.ObjectModel.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Workspace\\StockJock\\dotnet-api\\aspnet\\SJApi.ObjectModel\\SJApi.ObjectModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
