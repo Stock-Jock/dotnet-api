@@ -39,6 +39,18 @@ namespace SJApi.WebApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SJApi.WebApi", Version = "v1" });
             });
+            services.AddHttpClient("IEX", client => {
+                client.BaseAddress = new Uri("https://cloud.iexapis.com/stable");
+                client.DefaultRequestHeaders.Add("User-Agent", "HttpClientFactory");
+            });
+            services.AddScoped<ServiceConfig>(m => {
+                var pk = ConfigurationManager.ConnectionStrings["pk"].ConnectionString;
+                return new ServiceConfig
+                {
+                    IEXUrl = $"ref-data/symbols?token={pk}",
+                    IEXClient = "IEX"
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
