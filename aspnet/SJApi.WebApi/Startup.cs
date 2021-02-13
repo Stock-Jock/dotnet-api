@@ -28,6 +28,13 @@ namespace SJApi.WebApi
         {
 
             services.AddControllers();
+            services.AddHttpContextAccessor();
+            services.AddScoped<IHttpClient, TypedHttpClient>();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowOrigin",
+                    builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SJApi.WebApi", Version = "v1" });
@@ -49,6 +56,8 @@ namespace SJApi.WebApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("AllowOrigin");
 
             app.UseEndpoints(endpoints =>
             {
