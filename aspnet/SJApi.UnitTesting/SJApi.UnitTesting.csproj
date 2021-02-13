@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\SJApi.WebApi\SJApi.WebApi.csproj" />
     <ProjectReference Include="..\SJApi.ObjectModel\SJApi.ObjectModel.csproj" />
+    <ProjectReference Include="..\SJApi.DataService\SJApi.DataService.csproj" />
   </ItemGroup>
 
 </Project>
