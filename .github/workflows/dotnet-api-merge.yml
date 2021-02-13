@@ -1,0 +1,50 @@
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    defaults:
+      run:
+        working-directory: ./
+    # The type of runner that the job will run on
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.3.1
+      - run: dotnet build
+  
+  test:
+      defaults:
+        run:
+          working-directory: ./aspnet/SJApi.UnitTesting
+      runs-on: ubuntu-20.04
+      steps:
+        - uses: actions/checkout@v2.3.1
+        - run: dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover
+  
+#   analyze:
+#       defaults:
+#         run:
+#           working-directory: ./aspnet/SJApi.UnitTesting
+#       needs: [build, test]
+#       runs-on: ubuntu-20.04
+#       steps:
+#         - uses: actions/checkout@v2.3.1
+#         - run: git fetch --unshallow
+#         - run: dotnet tool install --global dotnet-sonarscanner
+#         - run: | 
+#             dotnet sonarscanner begin -o:{ UPDATE } -k:{ UPDATE } -d:sonar.login="${{ secrets.SONAR_TOKEN }}" -d:sonar.host.url='https://sonarcloud.io/'
+#             dotnet build
+#             dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
+#             dotnet sonarscanner end -d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+#           env: 
+#             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
