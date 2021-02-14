@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace APIService.Services
+namespace SJApi.DataService.Interfaces
 {
     public interface IHttpClient
     {
-        Task<T> Get<T>(string clientName, string uri, Guid id);
+        Task<T> Get<T>(string clientName, string uri);
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using APIService.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,7 +11,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Protocols;
 using Microsoft.OpenApi.Models;
+using SJApi.DataService.Interfaces;
+using SJApi.ObjectModel.Models;
 
 namespace SJApi.WebApi
 {
@@ -44,7 +48,7 @@ namespace SJApi.WebApi
                 client.DefaultRequestHeaders.Add("User-Agent", "HttpClientFactory");
             });
             services.AddScoped<ServiceConfig>(m => {
-                var pk = ConfigurationManager.ConnectionStrings["pk"].ConnectionString;
+                var pk = Configuration.GetConnectionString("pk");
                 return new ServiceConfig
                 {
                     IEXUrl = $"ref-data/symbols?token={pk}",

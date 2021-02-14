@@ -1,11 +1,11 @@
 using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using System.Net.Http.Headers;
+using System.Net;
 using System;
+using SJApi.DataService.Interfaces;
 using Newtonsoft.Json;
-using System.Collections.Generic;
-using APIService.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace APIService.Services
 {
@@ -23,10 +23,10 @@ namespace APIService.Services
             this._clientFactory = clientFactory;
         }
 
-        public async Task<T> Get<T>(string clientName, string uri, Guid id)
+        public async Task<T> Get<T>(string clientName, string uri)
         {
             var client = _clientFactory.CreateClient(clientName);
-            var response = await client.GetAsync($"{uri}/{id}");
+            var response = await client.GetAsync($"{uri}");
             var json = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<T>(json);
         }
