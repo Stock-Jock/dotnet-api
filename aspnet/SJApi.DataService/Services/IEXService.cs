@@ -1,7 +1,11 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 using SJApi.DataService.Interfaces;
 using SJApi.ObjectModel.Models;
+using SJAPI.ObjectModel.Models;
 
 namespace SJApi.DataService.Services
 {
@@ -16,9 +20,13 @@ namespace SJApi.DataService.Services
             _sc = sc;
         }
 
-        public async Task<IEnumerable> RetrieveSymbolsIEX()
+        public async Task<List<Object>> RetrieveSymbols()
         {
-            return await _client.Get<IEnumerable>(_sc.IEXClient, _sc.IEXUrl);
+            JArray stockList = await _client.Get<JArray>(_sc.IEXClient, _sc.IEXUrl);
+
+            List<Object> newStockList = stockList.ToObject<List<Object>>();
+
+            return newStockList;
         }
     }
 }
