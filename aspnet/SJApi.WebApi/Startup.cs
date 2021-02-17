@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Protocols;
 using Microsoft.OpenApi.Models;
 using SJApi.DataService.Interfaces;
+using SJApi.DataService.Services;
 using SJApi.ObjectModel.Models;
 
 namespace SJApi.WebApi
@@ -34,6 +35,7 @@ namespace SJApi.WebApi
             services.AddControllers();
             services.AddHttpContextAccessor();
             services.AddScoped<IHttpClient, TypedHttpClient>();
+            services.AddScoped<IIEXService, IEXService>();
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowOrigin",
