@@ -26,7 +26,6 @@ namespace SJApi.WebApi.Controllers
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> GetSymbols() =>
-            Ok(await _iex.RetrieveSymbols());
+        public async Task<IActionResult> GetSymbols() => Ok(await _iex.RetrieveSymbols());
     }
 }
