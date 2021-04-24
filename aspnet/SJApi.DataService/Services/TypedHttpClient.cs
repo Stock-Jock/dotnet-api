@@ -7,8 +7,11 @@ using SJApi.DataService.Interfaces;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Http;
 
-namespace APIService.Services
+namespace SJApi.DataService.Services
 {
+    /// <summary>
+    /// A typed http service to handle GET, POST, PUT, and DELETE methods.\
+    /// </summary>
     public class TypedHttpClient : IHttpClient
     {
         private HttpClient httpClient;
