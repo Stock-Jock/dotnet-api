@@ -1,17 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using APIService.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Protocols;
 using Microsoft.OpenApi.Models;
 using SJApi.DataService.Interfaces;
 using SJApi.DataService.Services;
@@ -46,14 +38,14 @@ namespace SJApi.WebApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SJApi.WebApi", Version = "v1" });
             });
             services.AddHttpClient("IEX", client => {
-                client.BaseAddress = new Uri("https://cloud.iexapis.com/stable");
+                client.BaseAddress = new Uri("https://cloud.iexapis.com");
                 client.DefaultRequestHeaders.Add("User-Agent", "HttpClientFactory");
             });
             services.AddScoped<ServiceConfig>(m => {
-                var pk = Configuration.GetConnectionString("pk");
+                // var pk = Configuration.GetConnectionString("pk");
                 return new ServiceConfig
                 {
-                    IEXUrl = $"ref-data/symbols?token={pk}",
+                    IEXUrl = "stable/ref-data/symbols?token=pk_47017819d55f4fa387ee42458b6a4dd5",
                     IEXClient = "IEX"
                 };
             });
