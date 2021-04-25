@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SJApi.ObjectModel\SJApi.ObjectModel.csproj" />
+    <ProjectReference Include="..\SJApi.DataService\SJApi.DataService.csproj" />
   </ItemGroup>
 
 </Project>
