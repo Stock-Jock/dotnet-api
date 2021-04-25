@@ -74,4 +74,3 @@ jobs:
             dotnet build
             dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover --logger trx
             .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-            
