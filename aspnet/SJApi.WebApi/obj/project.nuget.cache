@@ -1,9 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "uKa3rWoYVGpUwmPKJoWO3ulvKPXa3m6cB3WmQ7eHa3xjLURDFcFXj7movSsENVMpKUjy2C56xHTI7qK7wIc1BA==",
+=======
+  "dgSpecHash": "xFa63DUisvURGL8ZDHusAPVsUdF4eOryceBmpixQXPkulC1cAYFVeGiZ44nJnK3lpvFMWwew/zt0YvXioBnDQw==",
+>>>>>>> 08e4bf9fd31b455b05e583ea1746efdb18eeeb5c
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Workspace\\StockJock\\dotnet-api\\aspnet\\SJApi.WebApi\\SJApi.WebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\coverlet.msbuild\\3.0.3\\coverlet.msbuild.3.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.0\\microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.3\\microsoft.aspnetcore.jsonpatch.5.0.3.nupkg.sha512",
