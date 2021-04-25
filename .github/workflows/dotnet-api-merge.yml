@@ -34,7 +34,7 @@ jobs:
   analyze:
       defaults:
         run:
-          working-directory: ./aspnet/SJCRUDStock.UnitTesting
+          working-directory: ./aspnet/SJApi.UnitTesting
       needs: [build, test]
       runs-on: ubuntu-20.04
       steps:
