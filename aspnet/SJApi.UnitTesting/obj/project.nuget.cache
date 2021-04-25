@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "Y3KnHnUZTzBE3C1baJndkw9ydHf+Djuy51P/+90tUZVmzNQBTcOsnVi0mRRE1MHLUJxilicFSLkzOUcE8LA8+w==",
-=======
-  "dgSpecHash": "SM0M2EclfRtCSl1/E51lh+iJdG4vp+D9pRqXa34S3WJfeisauWI6TagQ6UYVmhkTh2fHKHvwZEGTFkIDjviWHg==",
->>>>>>> 08e4bf9fd31b455b05e583ea1746efdb18eeeb5c
+  "dgSpecHash": "92GiuNu5jcMenUkmrMIsWvaIvSyKAXh2Scr+0/XHpmX1wNeWPcF+BLzer0hoYWWOLBRi/i7pTYE+EN9bSkrn/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Workspace\\StockJock\\dotnet-api\\aspnet\\SJApi.UnitTesting\\SJApi.UnitTesting.csproj",
   "expectedPackageFiles": [
@@ -116,5 +112,12 @@
     "C:\\Users\\Admin\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Admin\\Workspace\\StockJock\\dotnet-api\\aspnet\\SJApi.UnitTesting\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "uKa3rWoYVGpUwmPKJoWO3ulvKPXa3m6cB3WmQ7eHa3xjLURDFcFXj7movSsENVMpKUjy2C56xHTI7qK7wIc1BA==",
-=======
-  "dgSpecHash": "xFa63DUisvURGL8ZDHusAPVsUdF4eOryceBmpixQXPkulC1cAYFVeGiZ44nJnK3lpvFMWwew/zt0YvXioBnDQw==",
->>>>>>> 08e4bf9fd31b455b05e583ea1746efdb18eeeb5c
+  "dgSpecHash": "TT7ViPxqbc2l37mzlbMWPDPzw6z9wAx71AH+hzEhwXCI7jce1SCMJeJ+6IXGAoUAR2QDoBCQSx22W+EItZAuUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Workspace\\StockJock\\dotnet-api\\aspnet\\SJApi.WebApi\\SJApi.WebApi.csproj",
   "expectedPackageFiles": [
@@ -30,5 +26,12 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Admin\\Workspace\\StockJock\\dotnet-api\\aspnet\\SJApi.WebApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
