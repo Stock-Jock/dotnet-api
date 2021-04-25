@@ -2,7 +2,7 @@ using System;
 
 namespace SJApi.ObjectModel.Models
 {
-    public class StockSymbol
+    public class Stock
     {
         public string Symbol { get; set; }
         public string exchange { get; set; }

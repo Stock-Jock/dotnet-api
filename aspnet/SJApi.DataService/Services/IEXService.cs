@@ -17,9 +17,9 @@ namespace SJApi.DataService.Services
             _sc = sc;
         }
 
-        public async Task<StockSymbol[]> RetrieveSymbols()
+        public async Task<Stock[]> RetrieveSymbols()
         {   
-            return await _client.Get<StockSymbol[]>(_sc.IEXClient, _sc.IEXUrl);
+            return await _client.Get<Stock[]>(_sc.IEXClient, _sc.IEXUrl);
         }
     }
 }

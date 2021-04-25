@@ -8,6 +8,6 @@ namespace SJApi.DataService.Interfaces
 {
     public interface IIEXService
     {
-        Task<StockSymbol[]> RetrieveSymbols();
+        Task<Stock[]> RetrieveSymbols();
     }
 }
