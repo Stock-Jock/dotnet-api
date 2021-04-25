@@ -2,16 +2,16 @@
 <CoverageSession>
   <Summary numSequencePoints="35" visitedSequencePoints="0" numBranchPoints="2" visitedBranchPoints="0" sequenceCoverage="0" branchCoverage="0" maxCyclomaticComplexity="7" minCyclomaticComplexity="0" visitedClasses="0" numClasses="2" visitedMethods="0" numMethods="6" />
   <Modules>
-    <Module hash="B2850593-613F-45AE-BA5B-E452EA8013BB">
+    <Module hash="3F69EB0D-C38E-4273-85DC-23E0F8CFD025">
       <ModulePath>SJApi.ObjectModel.dll</ModulePath>
-      <ModuleTime>2021-04-25T07:17:26</ModuleTime>
+      <ModuleTime>2021-04-25T08:17:10</ModuleTime>
       <ModuleName>SJApi.ObjectModel</ModuleName>
       <Files />
       <Classes />
     </Module>
-    <Module hash="5AF87C60-D889-4044-9ACF-4C513E8B3E44">
+    <Module hash="0FE7678A-5C49-42DA-ABD7-ECFB2EA89DE9">
       <ModulePath>SJApi.WebApi.dll</ModulePath>
-      <ModuleTime>2021-04-25T07:17:26</ModuleTime>
+      <ModuleTime>2021-04-25T08:17:10</ModuleTime>
       <ModuleName>SJApi.WebApi</ModuleName>
       <Files>
         <File uid="1" fullPath="C:\Users\Admin\Workspace\StockJock\dotnet-api\aspnet\SJApi.WebApi\Program.cs" />
